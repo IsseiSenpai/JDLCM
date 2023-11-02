@@ -1,0 +1,109 @@
+/*Fuentes: H1 Roboto Black, H2 Roboto Bold, h3 Roboto Bold Italic, P Roboto Regular*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,400;1,700&display=swap');
+
+
+/*Estilos globales*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Variables css*/
+:root {
+    --colorPrincipal: #071A5C;
+    --colorSegundario: linear-gradient(90deg, #71CA6D, #439847);
+    --titulo1: 'Roboto';
+    --titulo1: 'Roboto-Bold', sans-serif;
+    --titulo2: 'Poppins', sans-serif;
+    --titulo3: 'Poppins', sans-serif;
+    --parrafo: 'Roboto-Regular', sans-serif;
+}
+/*Estilos de fuentes*/
+h1 {
+    font-family: var(--titulo1);
+    font-size: 2.5rem;
+    color: #093146;
+}
+h2 {
+    font-family: var(--titulo2);
+    font-size: 2rem;
+}
+h3 {
+    font-family: var(--titulo3);
+    font-size: 1.8rem;
+}
+p {
+    font-family: var(--parrafo);
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.4;
+    align-items: center;
+}
+span {
+    font-size: 1.5em;
+}
+/*Estilos barra de navegacion*/
+nav {
+    background: var(--colorPrincipal);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5vh;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+    width: auto;
+}
+.nav-item {
+    margin: 0 1rem;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #fff;
+}
+.nav-item a:hover {
+    color: #000;
+}
+/*Estilos de secciones*/
+.seccion1 {
+    width: 100%;
+    height: auto;
+    padding: 0 2em 0 2em;
+    background: linear-gradient(90deg, #71CA6D, #439847);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.seccion1 img {
+    max-width: 100%;
+    height: auto;
+}
+.encabezado {
+    max-width: 700px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: normal;
+    margin-left: 2em;
+    order: 1;
+}
+/* Aplicar un margen a los elementos h1 y p */
+.encabezado h1, .encabezado p {
+    margin: 0.5em 0;
+}
+/*Aplicacion de responsividad*/
+@media screen and (max-width: 768px) {
+    .seccion1{
+        flex-direction: column;
+        text-align: justify;
+    }   
+    .seccion1 img {
+        order: 2;
+    }
+    .encabezado {
+        margin: 0;
+    }
+}
