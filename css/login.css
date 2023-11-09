@@ -8,6 +8,8 @@
     box-sizing: border-box;
 }
 
+/*--------------------------------------------------------------------------------------------------------------*/
+
 /* Variables CSS */
 :root {
     --colorPrincipal: #071A5C;
@@ -63,6 +65,8 @@ nav {
     margin-left: auto;
     border-radius: 50px;
 }
+
+/*--------------------------------------------------------------------------------------------------------------*/
 
 /*Login*/
 .login-section {
@@ -165,5 +169,98 @@ nav {
 /* Estilo para el footer */
 footer {
     background: var(--colorPrincipal);
-    padding: 20px; /* Agrega espacio alrededor del contenido del footer */
+    padding: 20px; 
+}
+
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/* Menu de hamburguesa */
+.menu-toggle {
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+.menu-toggle.active + .menu {
+    display: block;
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+
+/*Responsive*/
+@media screen and (max-width: 768px) {
+    /* Estilos para pantallas más pequeñas */
+    .login-section {
+        padding: 50px; /* Cambia el espaciado izquierdo */
+        flex-direction: column; /* Cambia la dirección de flexión */
+    }
+
+    .login-content {
+        width: 110%; /* Ajusta el ancho del contenido */
+        height: auto; /* Ajusta la altura automáticamente */
+        margin-top: 50px;
+        border-radius: 30px;
+    }
+
+    .login-image {
+        display: none;
+    }
+
+    .login-form {
+        padding: 0; /* Añade espaciado alrededor del formulario */
+        max-width: 100%; /* Ajusta la altura automáticamente */
+    }
+
+    .login-form img {
+        max-width: 100%;
+        max-height: 100%; /* Limita la altura de la imagen */
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+    }
+
+    .form-group label {
+        padding: 0px;
+        font-size: 16px; /* Reduce el tamaño de la fuente de la etiqueta */
+    }
+
+    .form-group input {
+        font-size: 16px; /* Reduce el tamaño de la fuente del input */
+    }
+
+    .button-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Cambia la dirección de flexión para apilar los botones */
+    }
+
+    .login-button,
+    .return-button {
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+        border-radius: 35px; /* Igualar el radio del borde al de los campos de entrada */
+        width: 85%; /* Hacer que el ancho sea igual al de los campos de entrada */
+        margin: 5px;
+        font-size: 16px; /* Ajusta el tamaño de fuente a tu preferencia */
+        box-shadow: -5px 5px 25px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Ajusta el tamaño de los iconos aquí */
+    .form-group i {
+        font-size: 20px;
+        padding-left: 10px; /* Reduce el tamaño de los iconos */
+    }
+
+    .menu, .matricula{
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block; /* Muestra el icono de hamburguesa */
+        font-size: 24px; /* Ajusta el tamaño del icono a tu preferencia */
+        color: #fff; /* Color del icono de hamburguesa */
+        cursor: pointer; /* Cambia el cursor al puntero para indicar que es interactivo */
+        padding-left: 40%;
+    }
 }

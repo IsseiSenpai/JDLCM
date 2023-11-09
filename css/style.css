@@ -89,15 +89,16 @@ nav {
     margin-right: 30px;
 }
 /* Botón "Matrícula" */
-.matricula {
+.matricula{
     background-color: #034725;
     color: #fff;
     padding: 5px 25px;
     font-size: 18px;
     border: none;
     cursor: pointer;
-    margin-left: auto; 
+    margin-left: 480%; 
     border-radius: 50px;
+    
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Estilos de secciones*/
