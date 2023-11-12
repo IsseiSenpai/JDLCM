@@ -8,3 +8,9 @@ menuToggle.addEventListener("click", function () {
         menuSidebar.style.width = "0px";
     }
 });
+
+window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.display = "none";
+});
+

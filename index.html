@@ -17,26 +17,32 @@
     <title>José de la Crúz Mena</title>
 </head>
 <body>
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
     <!--Encabezado-->
     <header>
-    <!--Barra de navegacion-->
         <nav>
             <div class="logo">
-                <img src="../src/imagenes/imagen1.webp" alt="">
+                <a href="../index.html">
+                    <img src="../src/imagenes/imagen1.webp" alt="">
+                </a>
             </div>
 
             <i class="bi bi-list menu-toggle"></i>
             
             <ul class="menu">
-                <li class="nav-item"><a href="#">Historia</a></li>
-                <li class="nav-item"><a href="#">Misión</a></li>
-                <li class="nav-item"><a href="#">Noticias</a></li>
-                <li class="nav-item"><a href="#">Galeria</a></li>
-                <li class="nav-item"><a href="#">Personal</a></li>
-                <li class="nav-item"><a href="#">Contactos</a></li>
+                <li class="nav-item"><a href="../index.html#seccion2">Historia</a></li>
+                <li class="nav-item"><a href="../index.html#seccion3">Misión</a></li>
+                <li class="nav-item"><a href="../index.html#seccion4">Noticias</a></li>
+                <li class="nav-item"><a href="../index.html#seccion5">Galeria</a></li>
+                <li class="nav-item"><a href="../index.html#seccion6">Personal</a></li>
+                <li class="nav-item"><a href="../index.html#seccion7">Ubicación</a></li>
+                <li class="nav-item"><a href="../index.html#seccion8">Contactos</a></li>
             </ul>
             <button class="matricula" onclick="window.location.href='pages/login.html';">Matrícula</button>
         </nav>
+    <!--Barra de navegacion-->
         <!--Seccion 1, Pantalla de bienvenida-->
         <section class="seccion1">
             <img src="src/imagenes/imagen2.webp" width="572" height="500" alt="Imagen de presentación del colegio José de la Crúz Mena">
@@ -50,7 +56,7 @@
     </header>
     <main>
         <!--Seccion 2, Historia-->
-        <section class="seccion2">
+        <section class="seccion2" id="seccion2">
             <div class="seccion2-texto">
                 <h2>Historia del Colegio José de la Cruz Mena</h2>
                 <p>Hace más de un siglo, en el año 1880, en un campo de fútbol en la localidad de Pedro Joaquín Chamorro en Managua, nacía una institución educativa que pronto se convertiría en un faro de conocimiento y formación: el Colegio José de la Cruz Mena.</p>
@@ -61,7 +67,7 @@
         </section>
         <hr>
         <!--Seccion 3, Misión, Visión y Valores-->
-        <section class="seccion3">
+        <section class="seccion3" id="seccion3">
             <h2>Misión, Visión y Valores</h2>
             <div class="contenedor">
                 <div class="iten">
@@ -108,7 +114,7 @@
         </section>
         <!--Seccion 4, Noticias-->
         <hr>
-        <section class="seccion4">
+        <section class="seccion4" id="seccion4">
             <h2>¡Celebremos Nuestra Independencia con Orgullo y Alegría!</h2>
             <h3>Unidos por Nuestra Historia y Cultura: Celebrando Nuestra Independencia</h3>
             <div class="imagenNoticias">
@@ -128,7 +134,7 @@
         </section>
         <hr>
         <!--Seccion 5, Galeria-->
-        <section class="seccion5">
+        <section class="seccion5" id="seccion5">
             <div class="grid-container">
                 <div class="item-a">
                     <img src="src/imagenes/galeria1.webp" class="album">
@@ -158,7 +164,7 @@
         </section>
         <!--Seccion 6, Personal-->
         <hr class="azul">
-        <section class="seccion6">
+        <section class="seccion6" id="seccion6">
             <div class="items">
                 <h2>Nuestro Equipo Docente y Administrativo</h2>
                 <img src="src/imagenes/personal/Directora.webp" alt="" width="300" height="300" style="margin: 0 auto">
@@ -195,7 +201,7 @@
         </section>
         <hr class="azul">
         <!--Seccion 7, Ubicacion-->
-        <section class="seccion7">
+        <section class="seccion7" id="seccion7">
             <h2>Nuestra Ubicación</h2>
             <div class="ubicacion">
                 <div class="ubicacion_texto">
@@ -209,7 +215,7 @@
             </div>
         </section>
         <!--Seccion 8, Comentarios-->
-        <section class="seccion8">
+        <section class="seccion8" id="seccion8">
             <h2>Envíanos tus comentarios</h2>
             <img src="src/imagenes/Modelo-Maria2-1.webp" alt="" width="572" height="500">
         </section>

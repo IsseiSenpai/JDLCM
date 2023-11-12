@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Variables css*/
@@ -20,6 +21,34 @@
     --titulo3: 'Roboto', sans-serif; font-weight: 700;
     --titulo4: 'Roboto', sans-serif; font-weight: 700; 
     --parrafo: 'Roboto', sans-serif; font-weight: 400;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+/*Pantalla de carga*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--colorSegundario);
+    z-index: 9999;
+    
+}
+#loader {
+    border: 8px solid #ffffff;
+    border-top: 8px solid var(--colorPrincipal);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s ease-in-out infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+}
+::selection{
+    background-color: #1b4e1d;
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Estilos de fuentes*/
@@ -45,8 +74,8 @@ h4 {
     font-family: var(--titulo4);
     color: var(--colorPrincipal);
     font-size: 1.3rem;
-    margin: 0.5em 0; /* 10px de margen superior e inferior, y 'auto' para centrarlo horizontalmente */
-    text-align: center; /* Para asegurarte de que el texto esté centrado horizontalmente */
+    margin: 0.5em 0;
+    text-align: center;
 }
 p {
     font-family: var(--parrafo);
@@ -63,6 +92,9 @@ span {
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Estilos barra de navegacion*/
+body {
+    width: 100%;
+}
 nav {
     display: flex;
     align-items: center;
@@ -88,6 +120,14 @@ nav {
     font-size: 20px;
     padding-left: 30px;
 }
+.nav-item a:hover {
+    color: #eec54a;
+    transition: 0.2s ease-in-out;
+}
+.nav-item:active{
+    transform: scale(1.1);
+}
+
 .menu-toggle {
     cursor: pointer;
     color: #fff;
@@ -114,6 +154,12 @@ nav {
     cursor: pointer;
     margin-left: auto;
     border-radius: 50px;
+}
+.matricula:hover {
+    background: var(--colorSegundario);
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Estilos de secciones*/
