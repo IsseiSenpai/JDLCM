@@ -47,8 +47,47 @@
     margin-top: -30px;
     margin-left: -30px;
 }
-::selection{
-    background-color: #1b4e1d;
+/*flor*/
+.flor1{
+    max-width: 500px;
+    max-height: 300px;
+    position: absolute;
+    z-index: 1;
+    right: 0px;
+    bottom: -100px;
+}
+.flor2{
+    max-width: 600px;
+    max-height: 400px;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    bottom: -140px;
+}
+.flor2-2{
+    max-width: 500px;
+    max-height: 300px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+}
+.flor3{
+    max-width: 600px;
+    max-height: 400px;
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 0px;
+    opacity: 30%;
+}
+.flor4{
+    max-width: 300px;
+    max-height: 200px;
+    position: absolute;
+    z-index: -1;
+    right: 100px;
+    top: -20px;
+    opacity: 30%;
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Estilos de fuentes*/
@@ -94,6 +133,9 @@ span {
 /*Estilos barra de navegacion*/
 body {
     width: 100%;
+}
+header{
+    position: relative;
 }
 nav {
     display: flex;
@@ -181,6 +223,7 @@ nav {
 /*-------------------------------------------*/
 /*Seccion 2*/
 .seccion2 {
+    position: relative;
     width: 100%;
     height: auto;
     background: var(--colorPrincipal);
@@ -277,6 +320,8 @@ nav {
     text-align: center;
 }
 .seccion4{
+    position: relative;
+    z-index: -1;
     background: var(--colorPrincipal);
     width: 100%;
     text-align: center;
@@ -405,6 +450,9 @@ footer {
     .iconos-pie img{
         min-width: 80px;
         margin: 0 0.5rem;
+    }
+    .flor2-2 {
+        display: none;
     }
 }
 /*--------------------------------------------------------------------------------------------------------------*/
