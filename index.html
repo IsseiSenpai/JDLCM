@@ -22,8 +22,11 @@
     <!--Barra de navegacion-->
         <nav>
             <div class="logo">
-                <img src="src/imagenes/imagen1.webp" alt="">
+                <img src="../src/imagenes/imagen1.webp" alt="">
             </div>
+
+            <i class="bi bi-list menu-toggle"></i>
+            
             <ul class="menu">
                 <li class="nav-item"><a href="#">Historia</a></li>
                 <li class="nav-item"><a href="#">Misión</a></li>
@@ -32,9 +35,7 @@
                 <li class="nav-item"><a href="#">Personal</a></li>
                 <li class="nav-item"><a href="#">Contactos</a></li>
             </ul>
-            <a href="./pages/login.html">
-            <button class="matricula">Matrícula</button>
-            </a>
+            <button class="matricula" onclick="window.location.href='pages/login.html';">Matrícula</button>
         </nav>
         <!--Seccion 1, Pantalla de bienvenida-->
         <section class="seccion1">
@@ -156,19 +157,81 @@
             </div>
         </section>
         <!--Seccion 6, Personal-->
-        <section class="seccion6"></section>
+        <hr class="azul">
+        <section class="seccion6">
+            <div class="items">
+                <h2>Nuestro Equipo Docente y Administrativo</h2>
+                <img src="src/imagenes/personal/Directora.webp" alt="" width="300" height="300" style="margin: 0 auto">
+                <h3>Directora</h3>
+                <h2>Arlen María Rodríguez Flores</h2>
+                <p>Es una apasionada educadora con más de 20 años de experiencia en el campo de la enseñanza y la administración escolar. Como directora del Colegio José de la Cruz Mena, ella lidera con dedicación y visión.</p>
+            </div>
+            <div class="empleados">
+                <div class="empleado1">
+                    <img src="src/imagenes/personal/personal_1.webp" alt="" width="150" height="150">
+                    <div>
+                        <h2>Sra. Jubelkis Saballo</h2>
+                        <h3>Subdirectora</h3>
+                        <p>La Sra. Jubelkis Saballo desempeña un papel vital en la administración del Colegio José de la Cruz Mena como subdirectora. Con una larga trayectoria en la educación y una pasión por ayudar a los estudiantes a alcanzar su máximo potencial, trabaja en estrecha colaboración con la directora para garantizar el buen funcionamiento de la institución.</p>
+                    </div>
+                </div>
+                <div class="empleado1">
+                    <img src="src/imagenes/personal/personal_2.webp" alt="" width="150" height="150">
+                    <div>
+                        <h2>Dr. Luis Morales</h2>
+                        <h3>Profesor de Ciencias</h3>
+                        <p>El Dr. Luis Morales es un profesor de ciencias con una profunda pasión por la enseñanza y la investigación. Con un doctorado en biología y varios años de experiencia en laboratorios académicos y de investigación, el Dr. Morales trae un nivel excepcional de conocimiento y experiencia a su aula.</p>
+                    </div>
+                </div>
+                <div class="empleado1">
+                    <img src="src/imagenes/personal/personal_3.webp" alt="" width="150" height="150">
+                    <div>
+                        <h2>Sro. Keneth Pérez</h2>
+                        <h3>Profesor de Lengua y Literatura</h3>
+                        <p>El Sro. Keneth Pérez es un profesora de lengua y literatura apasionada por la literatura y la escritura creativa. Con un enfoque enriquecedor en la comprensión de textos y la expresión escrita, El Sro. Pérez inspira a sus estudiantes a explorar el mundo de las palabras y a desarrollar sus habilidades de comunicación.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr class="azul">
         <!--Seccion 7, Ubicacion-->
         <section class="seccion7">
             <h2>Nuestra Ubicación</h2>
-            <p>Nos encontramos en una ubicación estratégica en Managua, semáforos Robelo 6 cuadras al lago, específicamente, “Villa Pedro Joaquín Chamorro”.</p>
-            <p>8888-8888, JoséDeLaCruzMena@gmail.com</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15601.422090054897!2d-86.2388604!3d12.1561814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73fdebcb0b3023%3A0x9e9ae810218c56c0!2sEscuela%20Jose%20De%20La%20Cruz%20Mena!5e0!3m2!1ses-419!2sni!4v1698893116797!5m2!1ses-419!2sni" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="ubicacion">
+                <div class="ubicacion_texto">
+                    <p>Nos encontramos en una ubicación estratégica en Managua, semáforos Robelo 6 cuadras al lago, específicamente, “Villa Pedro Joaquín Chamorro”.</p>
+                    <p>8888-8888, JoséDeLaCruzMena@gmail.com</p>
+                    <img src="src/imagenes/JDLCM.webp" alt="">
+                </div>
+                <div class="ubicacion_mapa">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15601.422090054897!2d-86.2388604!3d12.1561814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f73fdebcb0b3023%3A0x9e9ae810218c56c0!2sEscuela%20Jose%20De%20La%20Cruz%20Mena!5e0!3m2!1ses-419!2sni!4v1698893116797!5m2!1ses-419!2sni" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </section>
         <!--Seccion 8, Comentarios-->
-        <section class="seccion8"></section>
+        <section class="seccion8">
+            <h2>Envíanos tus comentarios</h2>
+            <img src="src/imagenes/Modelo-Maria2-1.webp" alt="" width="572" height="500">
+        </section>
     </main>
+    <hr>
     <footer>
-        <section class="seccion9"></section>
+        <section class="seccion9">
+            <div class="iconos-pie">
+                <img src="src/imagenes/linkdeinteres/linkdeinteres1.webp" alt="">
+                <img src="src/imagenes/linkdeinteres/linkdeinteres2.webp" alt="">
+                <img src="src/imagenes/linkdeinteres/linkdeinteres3.webp" alt="">
+                <img src="src/imagenes/linkdeinteres/linkdeinteres4.webp" alt="">
+            </div>
+            <div class="redesSociales">
+                <h2>SÍGANOS EN LAS REDES SOCIALES</h2>
+            </div>
+            <P>En el Colegio José de la Cruz Mena, nos enorgullece ofrecer una educación de calidad y un compromiso inquebrantable con el desarrollo de nuestros estudiantes. Nuestra misión es proporcionar un ambiente de aprendizaje inclusivo y estimulante que fomente el crecimiento académico y personal. Siempre estamos dispuestos a escuchar tus comentarios y preguntas. No dudes en ponerte en contacto con nosotros a través de los canales proporcionados arriba. ¡Gracias por ser parte de nuestra comunidad educativa!</P>
+        </section>
+        <div class="pie">
+            <p>Copyright © 2023 José de la Cruz Mena, Inc. Todos los derechos reservados.</p>
+        </div>
     </footer>
+    <script src="../js/menu.js"></script>
 </body>
 </html>
