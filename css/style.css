@@ -356,6 +356,115 @@ iframe {
     border-radius: 15px;
     box-shadow: -5px 5px 0px 0px rgba(153, 157, 158, 0.61);
 }
+
+/*section8*/
+.consultas-content {
+    display: flex;
+    width: 450px;
+    height: 450px;
+    background: rgba(24, 22, 74, 0.1);
+    border-radius: 60px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    padding-left: 10%;
+}
+
+.form-group h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #093146;
+}
+
+.form-group label {
+    font-size: 20px;
+}
+
+.form-group input {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+    padding: 10px;
+    width: 90%;
+    border-radius: 35px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    box-shadow: -5px 5px 25px 10px rgba(0, 0, 0, 0.25);
+    color: #fff;
+}
+
+.form-group textarea{
+    border-radius: 25px;
+}
+
+.consultas-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 30px;
+    height: 80%; /* Aumenta la altura del formulario */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center
+}
+
+.login-button{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 40%;
+    margin: 5px;
+    font-size: 20px;
+    box-shadow: -5px 5px 25px 10px rgba(0, 0, 0, 0.25);
+    background: rgba(3, 71, 37, 1);
+    color: #fff;
+}
+
+textarea{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+    padding: 10px;
+    width: 90%;
+    height: 140px;
+    border-radius: 35px;
+    box-shadow: -5px 5px 25px 10px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    resize: none;
+}
+
+.input-icon {
+    position: relative;
+    width: 100%;
+}
+
+.input-icon i {
+    font-size: 20px;
+    position: absolute;
+    left: 15px;
+    padding-top:  calc(15px - 0.5em);;
+}
+
+.input-icon input {
+    padding-left: 30px; /* Ajusta este valor según el tamaño de tu ícono */
+    /* Resto de tus estilos... */
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fff;
+    padding-left: 15px;
+    font-family: var(--titulo2);
+}
+
+textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #fff;
+    padding-left: 35px;
+    font-family: var(--titulo2);
+}
+
 /*seccion9*/
 footer {
     background: var(--colorPrincipal);

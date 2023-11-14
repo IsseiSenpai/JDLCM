@@ -167,8 +167,7 @@ nav {
     padding: 10px;
 }
 
-.login-button,
-.return-button {
+.login-button{
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -177,17 +176,16 @@ nav {
     margin: 5px;
     font-size: 20px;
     box-shadow: -5px 5px 25px 10px rgba(0, 0, 0, 0.25);
-}
-
-.login-button {
     background: rgba(3, 71, 37, 1);
     color: #fff;
 }
 
-.return-button {
-    background: rgba(24, 22, 74, 1);
-    color: #fff;
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #ffffffab;
+    padding-left: 10px;
+    font-family: var(--titulo2);
 }
+
 
 /* Estilo para el footer */
 footer {
