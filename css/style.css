@@ -12,8 +12,8 @@
 /*Variables css*/
 :root {
     /*Variables de colores*/
-    --colorPrincipal: #071A5C;
-    --colorSegundario: linear-gradient(90deg, #71CA6D, #439847);
+    --colorPrincipal: linear-gradient(180deg, #071A5C, #061446);
+    --colorSegundario: linear-gradient(180deg, #71CA6D, #387a3b);
     --colorTerceario: #D7A310;
     /*Variables de fuentes*/
     --titulo1: 'Roboto', sans-serif; font-weight: 900;
@@ -103,9 +103,6 @@ h2 {
 }
 h3 {
     font-family: var(--titulo3);
-}
-h3 {
-    font-family: var(--titulo3);
     font-style: italic;
     font-size: 1.5rem;
 }
@@ -115,6 +112,7 @@ h4 {
     font-size: 1.3rem;
     margin: 0.5em 0;
     text-align: center;
+    font-style: italic;
 }
 p {
     font-family: var(--parrafo);
@@ -122,6 +120,9 @@ p {
     font-size: 1rem;
     line-height: 1.4;
     align-items: center;
+}
+a {
+    font-family: var(--titulo4);
 }
 .iconos p, .items p, .empleado1 p { 
     font-size: 0.8rem;
@@ -138,6 +139,9 @@ header{
     position: relative;
 }
 nav {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
     display: flex;
     align-items: center;
     background: var(--colorPrincipal);
@@ -206,15 +210,14 @@ nav {
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Estilos de secciones*/
 /*Seccion 1*/
-.seccion1, .seccion8 {
+.seccion1 {
     width: 100%;
     height: auto;
-    padding: 0 2em;
+    padding: 10vh 2em 0 2em;
     background: var(--colorSegundario);
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 .seccion1 img, .seccion2 img, .seccion4 img, .ubicacion img, .seccion8 img{
     max-width: 100%;
@@ -282,7 +285,7 @@ nav {
 }
 .iconos {
     margin: 0 8rem;
-    max-width: 300px;
+    max-width: 350px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -316,8 +319,11 @@ nav {
     margin: 1em 0;
     text-align: center;
 }
-.valores h3, .valores p, .items h3, .items h2 {
+.valores h3, .items h3, .items h2, .valores p {
     text-align: center;
+}
+.valores h3 {
+    margin: 2rem 0;
 }
 .seccion4{
     position: relative;
@@ -354,57 +360,58 @@ img[alt="Notivias"] {
 }
 iframe {
     border-radius: 15px;
-    box-shadow: -5px 5px 0px 0px rgba(153, 157, 158, 0.61);
+    box-shadow: -5px 5px 25px 10px rgba(0, 0, 0, 0.25);
 }
 
 /*section8*/
-.consultas-content {
+.seccion8 {
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+    background: var(--colorSegundario);
     display: flex;
-    width: 450px;
-    height: 450px;
+    justify-content: center;
+    
+    padding-top: 30px;
+}
+.consultas-form {
+    flex: 1;
+    color: #fff;
+    font-size: 30px;
+    max-width: 450px;
+    max-height: 450px;
     background: rgba(24, 22, 74, 0.1);
-    border-radius: 60px;
+    border-radius: 60px;;
+    padding: 1em;
+    text-align: center;
 }
-
-.form-group {
-    margin-bottom: 10px;
-    padding-left: 10%;
-}
-
-.form-group h2{
-    padding-top: 20px;
-    padding-bottom: 20px;
+.consultas-form h2{
+    margin-bottom: 1em;
     color: #093146;
 }
-
-.form-group label {
-    font-size: 20px;
+.form-group {
+    margin-bottom: 0.4em;   
 }
-
-.form-group input {
+.form-group label {
+    font-size: 1em;
+}
+.form-group input, .form-group textarea{
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
     padding: 10px;
-    width: 90%;
+    width: 100%;
     border-radius: 35px;
     border: none;
     display: flex;
     justify-content: center;
     box-shadow: -5px 5px 25px 10px rgba(0, 0, 0, 0.25);
     color: #fff;
+    
 }
-
-.form-group textarea{
-    border-radius: 25px;
-}
-
-.consultas-form {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: #fff;
-    font-size: 30px;
-    height: 80%; /* Aumenta la altura del formulario */
+textarea {
+    border-radius: 25px !important;
+    width: 100%;
+    height: 140px;
+    resize: none;
 }
 
 .button-group {
@@ -423,17 +430,6 @@ iframe {
     box-shadow: -5px 5px 25px 10px rgba(0, 0, 0, 0.25);
     background: rgba(3, 71, 37, 1);
     color: #fff;
-}
-
-textarea{
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
-    padding: 10px;
-    width: 90%;
-    height: 140px;
-    border-radius: 35px;
-    box-shadow: -5px 5px 25px 10px rgba(0, 0, 0, 0.25);
-    color: #fff;
-    resize: none;
 }
 
 .input-icon {
@@ -493,6 +489,9 @@ footer {
     align-items: center;
     justify-content: center;
 }
+.pie a {
+    color: #ffffff;
+}
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Aplicacion de responsividad*/
 @media screen and (max-width: 768px) {
@@ -526,7 +525,7 @@ footer {
         font-size: 2em;
     }
     h2 {
-        font-size: 1.8em;
+        font-size: 1.8rem;
     }
     h3 {
         font-size: 1.6em;
@@ -562,6 +561,12 @@ footer {
     }
     .flor2-2 {
         display: none;
+    }
+    textarea {
+        height: auto;
+    }
+    .consultas-form {
+        margin: 0 20px 15px 20px;
     }
 }
 /*--------------------------------------------------------------------------------------------------------------*/
