@@ -49,6 +49,15 @@ nav{
     font-size: 20px;
     padding-left: 30px;
 }
+
+.nav-item a:hover {
+    color: #eec54a;
+    transition: 0.2s ease-in-out;
+}
+.nav-item:active{
+    transform: scale(1.1);
+}
+
 /* Establecer ancho y alto de la imagen */
 .logo{
     height: 60px;
@@ -67,10 +76,12 @@ nav{
     border-radius: 50px;
 }
 
-.matricula:hover{
-    background-color: #439847;
+.matricula:hover {
+    background: var(--colorSegundario);
     transform: scale(1.1);
-}
+    transition: 0.2s ease-in-out;
+    
+}  
 
 /* Seccion 1*/
 
