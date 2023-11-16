@@ -91,23 +91,51 @@ nav{
 /* Seccion 2*/ 
 
 .seccion-2{
+    width: 100%;
     background-color: var(--colorTerceario);
     height: 8vh;
-    display: flex;
-    justify-content: center;
+  
 }
 
 .nav-links li{
     list-style: none;
-    display: inline-block;
-    padding: 15px 115px;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
 }
 
 .nav-links li a{
-    font-size: 16px;
+    font-size: 20px;
     font-family: var(--parrafo);
     color: #fff;
     text-decoration: none;
+
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 5px);
+    width: 100%;
+    height: 4px;
+    
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+
+/* Estilo cuando el enlace tiene la clase 'selected' */
+.nav-links a.selected::after,
+.nav-links a:hover::after {
+   opacity: 0.8;
+  
 }
 
 /*Formularios*/
