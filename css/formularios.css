@@ -126,7 +126,7 @@ form,
 }
 /*Formulario 2 -----------------------------*/
 .formulario-2{
-    height: 65vh;/*Dandole una altura al formulario 2*/
+    height: auto;/*Dandole una altura al formulario 2*/
 }   
 
 .titulo, 
@@ -150,17 +150,44 @@ form,
 
 /*Datos de la matricualas------------*/
 
-.titulo-notas{
-    font-size: 20px;
-    padding: 0;
-}
 .inputs-group-2{
-    margin-top: 30px;
-    margin-left: 8rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
-    gap: 10px;
+    margin-top: 30px;   
 }
+
+.tabla {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 50px;
+    font-family: var(--titulo2);
+}
+
+.encabezado-tabla th{
+    text-align: center;
+    font-size: 20px;
+    background-color: #C49D35;
+    color: #fff;
+    padding: 5px;
+}
+
+.calificaciones td{
+    padding: 10px 0;
+}
+
+.input-tabla{
+    text-align: center;
+}
+
+
+tbody .calificaciones input{
+    width: 30%;
+    font-family: var(--titulo2);
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #70a870;
+}
+
 
 .notas input{
     
