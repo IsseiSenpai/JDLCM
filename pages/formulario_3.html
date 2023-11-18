@@ -6,6 +6,7 @@
     <title>Datos de la matricula</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/formularios.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
     <header>
@@ -145,10 +146,6 @@
                             <td class="materia" colspan="2">Expresión Cultural y Artistic0a</td>
                             <td class="input-tabla"><input type="text" placeholder="100.00"></td>
                         </tr>
-                        
-                        
-                          
-                        <!-- Agrega más filas según sea necesario -->
                     </tbody>
                 </table>
                 
@@ -158,7 +155,7 @@
               <div class="btn-formulario">
                 <a href="#"><button class="btn-estilo">Cancelar</button></a>
                 <a href="formulario_2.html"><button class="btn-estilo2">Atras</button></a>
-                <a href="listado.html"><button class="btn-estilo2">Guardar</button></a>
+                <button class="btn-estilo2" onclick="alertSave()">Guardar</button>
               </div>
           </section>
   
@@ -171,5 +168,6 @@
         </p>
       </footer>
       <script src="../js/men.js"></script>
+      <script src="../js/alert.js"></script>
 </body>
 </html>
