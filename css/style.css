@@ -185,6 +185,7 @@ nav {
 .logo img {
     height: 60px;
     margin-right: 30px;
+    box-shadow: 10px 5px 10px 45deg #000;
 }
 
 /* Botón "Matrícula" */
@@ -481,6 +482,16 @@ footer {
 .redesSociales {
     margin: 2em 0;
 }
+.redes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes a img {
+    max-width: 50px;
+    max-height: 50px;
+    margin: 1em ;
+}
 .pie {
     display: flex;
     align-items: center;
@@ -565,6 +576,14 @@ footer {
     .consultas-form {
         margin: 0 20px 15px 20px;
     }
+    .redesSociales {
+        margin: 0.5em 0;
+    }
+    .redes a img {
+        max-width: 20px;
+        max-height: 20px;
+        margin: 0.5em ;
+    }
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Estilos Variados*/
@@ -628,23 +647,49 @@ hr, .pie {
 }
 @media (max-width: 768px) {
     .grid-container {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 200px 200px 200px 200px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px 200px 200px;
     }
-  
+
     .item-a {
-      grid-row: 1 / 2;
+        grid-row: 1 / 2;
     }
-  
+
     .item-b {
-      grid-row: 2 / 3;
+        grid-row: 2 / 3;
     }
-  
+
     .item-c {
-      grid-row: 3 / 4;
+        grid-row: 3 / 4;
     }
-  
+
     .item-d {
-      grid-row: 4 / 5;
+        grid-row: 4 / 5;
     }
-  }
+}
+.seccion5{
+    position: relative;
+    height: auto;
+}
+.imagenesContenedor {
+    width: 1px;
+    height: 1px;
+    position: fixed;
+    z-index: 3;
+}
+.imagen-grande-galeria {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 3;
+    background-color: #000000d0;   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.imagen-grande-galeria img {
+    width: 60%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 1em;
+}

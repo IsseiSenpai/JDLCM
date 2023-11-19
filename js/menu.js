@@ -14,3 +14,18 @@ window.addEventListener("load", function () {
     preloader.style.display = "none";
 });
 
+
+
+
+
+function IMGaMostrar(image) {
+    const DivAmpliado = document.getElementById("DivAmpliado");
+    const ImagenAmpliadaSrc = document.getElementById("ImagenAmpliadaSrc");
+
+    ImagenAmpliadaSrc.src = image.src;
+    DivAmpliado.style.display = "flex";
+}
+function CerrarDiv() {
+    const DivAmpliado = document.getElementById("DivAmpliado");
+    DivAmpliado.style.display = "none";
+}
