@@ -12,30 +12,23 @@
     <header>
       <!--Barra de navegacion-->
       <nav>
-      
-        <img class="logo" src="../src/imagenes/imagen1.webp" alt="" />
-        
-        <i class="bi bi-list abrir" id="abrir"></i>
-        
-        <div class="nav" id="nav">
-            <i class="bi bi-x cerrar" id="cerrar"></i>
-          <ul class="menu" >
-            <li class="nav-item"><a href="formulario_1.html">Matrícula</a></li>
-            <li class="nav-item"><a href="#">Listar Estudiante</a></li>
-          </ul>
+        <div class="logo">
+            <a href="../index.html"><img src="../src/imagenes/imagen1.webp" alt=""></a>
         </div>
-
-        <a href="#">
-          <button class="matricula" onclick="window.location.href='../index.html';">Cerrar</button>
-        </a>
-
+        <i class="bi bi-list menu-toggle"></i>
+        <ul class="menu">
+          <li class="nav-item"><a href="formulario_1.html">Matricula</a></li>
+          <li class="nav-item"><a href="listado.html">Estudiantes</a></li>
+        </ul>
+        <button class="matricula" onclick="window.location.href='pages/login.html';">Cerrar</button>
       </nav>
     </header>
 
     <main>
       <section class="seccion-1">
-        <img src="" alt="" />
-        <h2 class="colegio">Centro Escolar Publico José de la Cruz Mena</h2>
+        <h2>Centro Escolar Publico José de la Cruz Mena</h2>
+        <img class="flor1" src="../src/imagenes/flor-sistema-2.webp" alt=""/>
+        <img class="flor2" src="../src/imagenes/flor-sistema-1.webp" alt="" />
       </section>
 
       <section class="seccion-2"></section>
@@ -45,7 +38,7 @@
           <div class="tablas_header">
             <h2>Matriculados</h2>
             <select class="filtrar-seccion" name="" id="">
-              <option value="select">Filtrar por Sección</option>
+              <option value="" disabled selected>Filtrar por Grado</option>
               <option value="opcion2">7mo</option>
               <option value="opcion1">8vo</option>
               <option value="opcion2">9no</option>
@@ -61,7 +54,7 @@
           <table class="students">
             <tr>
               <th>Nombre/Apellido</th>
-              <th>Sección</th>
+              <th>Grado</th>
               <th>Turno</th>
               <th>Año</th>
               <th>Sexo</th>
@@ -147,8 +140,7 @@
       </section>
     </main>
     <footer>
-      <p> Copyright &copy; 2023 José de la Cruz Mena, Inc. Todos los derechos
-        reservados</p>
+      <p><a href="https://isseisenpai.github.io/JDLCM/">Innovación educativa José de la Cruz Mena</a> tiene licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1">CC BY-NC-SA 4.0.</a> © 2023 por <a href="https://github.com/IsseiSenpai">TeChettos</a></p>
     </footer>
    <script src="../js/men.js"></script>
    <script src="../js/alert.js"></script>

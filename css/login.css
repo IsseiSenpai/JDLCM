@@ -1,24 +1,28 @@
-/* Fuentes: H1 Roboto Black, H2 Roboto Bold, h3 Roboto Bold Italic, P Roboto Regular */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;0,900;1,400;1,700&display=swap');
-
-/* Estilos globales */
+/*--------------------------------------------------------------------------------------------------------------*/
+/*Estilos globales*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
-
 /*--------------------------------------------------------------------------------------------------------------*/
-
-/* Variables CSS */
+/*Variables css*/
 :root {
-    --colorPrincipal: #071A5C;
-    --colorSegundario: linear-gradient(90deg, #71CA6D, #439847);
-    --titulo1: 'Roboto';
-    --titulo1: 'Roboto-Bold', sans-serif;
-    --titulo2: 'Poppins', sans-serif;
-    --titulo3: 'Poppins', sans-serif;
-    --parrafo: 'Roboto-Regular', sans-serif;
+    /*Variables de colores*/
+    --colorPrincipal: linear-gradient(180deg, #071A5C, #061446);
+    --colorSegundario: linear-gradient(180deg, #71CA6D, #387a3b);
+    --colorTerceario: #D7A310;
+    /*Variables de fuentes*/
+    --titulo1: 'Roboto', sans-serif; font-weight: 900;
+    --titulo2: 'Roboto', sans-serif; font-weight: 700;
+    --titulo3: 'Roboto', sans-serif; font-weight: 700;
+    --titulo4: 'Roboto', sans-serif; font-weight: 700; 
+    --parrafo: 'Roboto', sans-serif; font-weight: 400;
+}
+a {
+    font-family: var(--titulo4);
 }
 
 /*navbar*/
@@ -88,7 +92,12 @@ nav {
     transition: 0.2s ease-in-out;
     
 }
-
+.login-button:hover {
+    background: var(--colorPrincipal);
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+    
+}
 /*--------------------------------------------------------------------------------------------------------------*/
 
 /*Login*/

@@ -148,18 +148,15 @@ nav {
     height: 10vh;
     padding: 10px 20px;
 }
-
 .menu {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
-
 .nav-item {
     margin-right: 10px;
 }
-
 .nav-item a {
     text-decoration: none;
     color: #fff;

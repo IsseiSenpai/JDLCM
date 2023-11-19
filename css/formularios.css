@@ -6,13 +6,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Variables css*/
 :root {
     /*Variables de colores*/
-    --colorPrincipal: #071A5C;
-    --colorSegundario: linear-gradient(90deg, #71CA6D, #439847);
+    --colorPrincipal: linear-gradient(180deg, #071A5C, #061446);
+    --colorSegundario: linear-gradient(180deg, #71CA6D, #387a3b);
     --colorTerceario: #D7A310;
     /*Variables de fuentes*/
     --titulo1: 'Roboto', sans-serif; font-weight: 900;
@@ -21,35 +22,37 @@
     --titulo4: 'Roboto', sans-serif; font-weight: 700; 
     --parrafo: 'Roboto', sans-serif; font-weight: 400;
 }
+option, label, input{
+    font-family: var(--parrafo);
+}
 
-nav{
+a {
+    font-family: var(--parrafo);
+}
+
+nav {
+    width: 100%;
     display: flex;
     align-items: center;
-    width: 100%;
-    top: 0;
     background: var(--colorPrincipal);
     height: 10vh;
     padding: 10px 20px;
-    position: fixed;
-    z-index: 1;
 }
-
 .menu {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
 }
-
 .nav-item {
     margin-right: 10px;
 }
-
 .nav-item a {
     text-decoration: none;
     color: #fff;
     font-size: 20px;
     padding-left: 30px;
 }
-
 .nav-item a:hover {
     color: #eec54a;
     transition: 0.2s ease-in-out;
@@ -58,67 +61,91 @@ nav{
     transform: scale(1.1);
 }
 
+.menu-toggle {
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+
+.menu-toggle.active + .menu {
+    display: block;
+}
+
 /* Establecer ancho y alto de la imagen */
-.logo{
+.logo img {
     height: 60px;
     margin-right: 30px;
 }
 
 /* Botón "Matrícula" */
-.matricula{
+.matricula {
     background-color: #034725;
     color: #fff;
     padding: 5px 25px;
     font-size: 18px;
     border: none;
     cursor: pointer;
-    margin-left: 110vh; 
+    margin-left: auto;
     border-radius: 50px;
 }
-
 .matricula:hover {
     background: var(--colorSegundario);
     transform: scale(1.1);
     transition: 0.2s ease-in-out;
     
-}  
-
+}
+/*No tocaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaar*/
 /* Seccion 1*/
-
 .seccion-1{
-    margin-top: 65px;
+    position: relative;
+    width: 100%;
     background: var(--colorSegundario);
     height: 20vh;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.colegio{
+.seccion-1 h2{
     font-family: var(--titulo1);
-    text-align: center;
     color: #fff;
-    font-size: 50px;
-    padding-top: 20px;
+    font-size: 3.125em;
+    font-style: italic;
 }
 
+.flor1 {
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    right: 10px;
+    max-width: 287.81px;
+    max-height: 150.55px;
+    opacity: 60%;
+}
+.flor2 {
+    position: absolute;
+    z-index: 1;
+    opacity: 60%;
+    top: -10px;
+    left: 10px;
+    max-width: 287.81px;
+    max-height: 150.55px;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
 /* Seccion 2*/ 
-
 .seccion-2{
     width: 100%;
     background-color: var(--colorTerceario);
     height: 8vh;
-  
 }
-
 .nav-links li{
     list-style: none;
 }
-
 .nav-links{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 10%;
 }
-
 .nav-links li a{
     font-size: 20px;
     font-family: var(--parrafo);
@@ -127,7 +154,6 @@ nav{
 
     position: relative;
 }
-
 .nav-links a::after {
     content: "";
     background-color: #ffffff;
@@ -136,23 +162,25 @@ nav{
     top: calc(100% + 5px);
     width: 100%;
     height: 4px;
-    
     opacity: 0;
     transition: opacity 0.3s;
 }
 
-
 /* Estilo cuando el enlace tiene la clase 'selected' */
-.nav-links a.selected::after,
-.nav-links a:hover::after {
-   opacity: 0.8;
-  
+.nav-links a.selected::after {
+    opacity: 0.8;
+    
 }
-
+.nav-links a.selected:hover {
+    color: #ffffff;
+}
+.nav-links a:hover {
+    color: var(--colorPrincipal);
+    transition: 0.5s ease-in-out;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
 /*Formularios*/
-
-form, 
-.formulario-2{
+form{
     background-color: #fff;
     max-width: 1050px;
     margin: auto;
@@ -168,18 +196,17 @@ form,
     height: auto;/*Dandole una altura al formulario 2*/
 }   
 
-.titulo, 
-.titulo-notas{
+.titulo, .titulo-notas{
     font-family: var(--titulo2);
     text-align: center;
-    font-size: 30px;
+    font-size: 1.875em;
     padding: 15px;
 }
 
 .inputs-group{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 25px;
+    margin: 25px 0 25px 0;
 }
 
 .inputs-group .cont{
@@ -202,14 +229,17 @@ form,
 
 .encabezado-tabla th{
     text-align: center;
-    font-size: 20px;
-    background-color: #C49D35;
+    font-size: 1.25em;
+    background-color: var(--colorTerceario);
+    border-radius: 15px;
     color: #fff;
     padding: 5px;
 }
 
 .calificaciones td{
     padding: 10px 0;
+    font-family: var(--parrafo);
+    font-size: 1em;
 }
 
 .input-tabla{
@@ -220,7 +250,7 @@ form,
 tbody .calificaciones input{
     width: 30%;
     font-family: var(--titulo2);
-    font-size: 18px;
+    font-size: 1.125em;
     text-align: center;
     border: none;
     outline: none;
@@ -247,13 +277,14 @@ tbody .calificaciones input{
 }
 
 .cajas-texto input, .cajas-texto select, .cajas-texto textarea{
-    width: 250px;
-    padding: 10px 10px 10px 50px;
-    font-size: 16px;
+    width: 15.625em;
+    padding: 0.625em 0.625em 0.625em 3.125em;
+    font-size: 1em;
     border-radius: 10px;
     border: 1px solid black;
     background-color: #f3efef;
-    outline: none;    
+    outline: none;  
+    font-family: var(--parrafo);  
 }
 
 .cajas-texto textarea{
@@ -273,11 +304,10 @@ tbody .calificaciones input{
     text-align: center;
 }
 
-.btn-form-1, .btn-form-2, 
-.btn-estilo, .btn-estilo2{
+.btn-form-1, .btn-form-2, .btn-estilo, .btn-estilo2{
     background-color: #E5605A;
     color: #fff;
-    font-size: 15px;
+    font-size: 0.938em;
     font-family: var(--titulo1);
     padding: 10px 35px;
     border: none;
@@ -287,40 +317,38 @@ tbody .calificaciones input{
     box-shadow: -3px 5px 20px #585858 ;
 }
 
-.btn-estilo, .btn-estilo2{
-    margin-top: 10vh;
-}
-
 .btn-form-2, .btn-estilo2{
     background-color: #18164A;
 }
 
-.btn-form-1:hover, .btn-edit:hover,
-.btn-estilo:hover {
+.btn-form-1:hover, .btn-edit:hover, .btn-estilo:hover {
     background-color: #FF2C22;
     transform: scale(1.1);
+    transition: 0.2s ease-in-out;
 }
 
-.btn-form-2:hover, .btn-delete:hover,
-.btn-estilo2:hover{
+.btn-form-2:hover, .btn-delete:hover, .btn-estilo2:hover{
     background-color: #06051A;
     transform: scale(1.1);
+    transition: 0.2s ease-in-out;
 }
 
 /*Pie de pagina*/
-
-footer{
+/*--------------------------------------------------------------------------------------------------------------*/
+.pie {
     background: var(--colorTerceario);
-    height: 5vh;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--parrafo);
-    font-size: 15px;
-    color: #fff;
-    text-align: center;
-    padding: 5px;
 }
-
+.pie a, .pie p {
+    color: #ffffff;
+}
 .abrir, .cerrar {
-   display: none;
+    display: none;
 }
 
 /*Esto son los estilos que le pertenecen 
@@ -336,16 +364,12 @@ al archivo llamado Listado*/
     border: 1px solid #034125;
     box-shadow: -3px 3px 20px #585858;
 }
-
-
-
 .students {
     width: 100%;
     border-spacing: 0;
     font-family: var(--titulo2);
     margin-bottom: 30px;
 }
-
 .tablas_header{
     display: flex;
     justify-content: space-between;
@@ -356,7 +380,6 @@ al archivo llamado Listado*/
     border-spacing: 0;
     font-family: var(--titulo2);
 }
-
 .filtrar-seccion{
     border-radius: 30px;
     width: 200px;
@@ -367,11 +390,9 @@ al archivo llamado Listado*/
     font-size: 16px;
     font-family: var(--titulo2);
 }
-
 .input_search{
     position: relative;
 }
-
 .input_search input{
     border-radius: 30px;
     width: 400px;
@@ -383,7 +404,6 @@ al archivo llamado Listado*/
     font-size: 16px;
     font-family: var(--titulo2);
 }
-
 #search{
     position: absolute;
     top: 50%;
@@ -391,37 +411,29 @@ al archivo llamado Listado*/
     margin-right: 10px;
     transform: translate(-50%, -50%);
 }
-
-
 th {
     background-color: #f1f1f1;
     text-align: justify;
     padding: 10px;
-
 }
 td {
     text-align: left;
     padding: 8px;
-   
     border-bottom: 1px solid #dbd2d2;
 }
-
 tr:hover{
     background-color: #f1f1f1;
 }
-
 .i{
     color: #9c9494;
     font-size: 20px;
     padding: 10px;
 }
-
 .status-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .btn-edit, .btn-delete{
     background-color: #FF2C22;
     padding: 10px 20px;
@@ -430,17 +442,20 @@ tr:hover{
     border-radius: 50px;
     color: #fff;
 }
-
 .btn-delete{
     background-color: #18164A;
 }
+/*--------------------------------------------------------------------------------------------------------------*/
 /*Responsive*/
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 765px) {
+    .flor1, .flor2 {
+        max-width: 143.905px;
+        max-height: 75.275px;
+    }
     
     /*Menu de hamburgesa*/
-   
-   .abrir , .cerrar {
+    .abrir , .cerrar {
         display: block; 
         font-size: 24px; 
         color: #fff; 
@@ -450,8 +465,6 @@ tr:hover{
     .nav{
         opacity: 0;
         visibility: hidden;
-
-        
         display: flex;
         flex-direction: column;
         align-items: end;
@@ -478,78 +491,61 @@ tr:hover{
     }
     
     /*-------------------------------------------*/
-   .seccion-1{
+    .seccion-1 {
         height: 8vh;
-   }
-   
-   .colegio{
-    font-size: 15px;
-    padding: 5px;
-   }
-
-   .seccion-2{
+    }
+    .seccion-1 h2 {
+        font-size: 15px;
+    }
+    .seccion-2 {
         height: 4vh;
     }
-    
-    .nav-links{
-     display: none;
+    .nav-links {
+        display: none;
     }
-   /*formulario*/
-
-   form{
-    max-width: 350px;
-   }
-
-   .formulario-2{
-    height: 105vh;
-   }
-
-   .inputs-group{
-    display: block;
+    /*formulario*/
+    form { 
+        max-width: 350px;
     }
-
-    .titulo{
+    .inputs-group {
+        display: block;
+    }
+    .titulo {
         padding:0;
         margin-top: 20px;
         font-size: 15px;
     }
-
-    hr{
-        margin-top: 10px;
-        
+    hr {
+        margin-top: 10px;   
     }
-
-    .cajas-texto input, .cajas-texto select, .cajas-texto textarea{
-        width: 100%; /*El anchos de la todas las cajas*/
-       
+    .cajas-texto input, .cajas-texto select, .cajas-texto textarea {
+        width: 100%; /*El anchos de la todas las cajas*/  
     }
-
-    .inputs-group-2{
+    .inputs-group-2 {
         margin-left: 0;
     }
-
-    .btn-formulario{
+    .btn-formulario {
         display: flex;
         justify-content: center;
     }
-
-    .btn-form-1, .btn-form-2{
+    .btn-form-1, .btn-form-2 {
         padding: 10px 25px;
         margin: 0 15px;
     }
-
-    .btn-estilo,
-    .btn-estilo2{
+    .btn-estilo, .btn-estilo2 {
         padding: 10px 25px;
         margin: 0 8px;
     }
-
-    footer{
-        font-size: 10px;
-        padding-top: 10px;
+    .calificaciones td, .calificaciones td input{
+        font-size: 0.7em;
+    }
+    .encabezado-tabla th {
+        font-size: 1em;
+    }
+    .pie p, .pie a {
+        font-size: 0.5em;
     }
 }
-
 /*estilo a la alerta del botton*/
 .custom-alerta {
     font-family: var(--titulo2);
@@ -581,7 +577,7 @@ tr:hover{
     font-family: var(--titulo2);
     color: rgba(7, 26, 92, 1) !important;
     background: #ffffff !important;
- }
+}
 
 .custom-confirmar-button:hover {
     background-color: #FF2C22;
