@@ -76,6 +76,9 @@ nav {
     height: 60px;
     margin-right: 30px;
 }
+#ocultar{
+    display: none;
+}
 
 /* Botón "Matrícula" */
 .matricula {
@@ -544,6 +547,12 @@ tr:hover{
     }
     .pie p, .pie a {
         font-size: 0.5em;
+    }
+    #ocultar {
+        display: block;
+    }
+    #mostrar {
+        display: none;
     }
 }
 /*estilo a la alerta del botton*/

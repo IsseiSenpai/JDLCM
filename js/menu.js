@@ -9,15 +9,7 @@ menuToggle.addEventListener("click", function () {
     }
 });
 
-window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
-    preloader.style.display = "none";
-});
-
-
-
-
-
+//Mostras las imagenes de la galeria
 function IMGaMostrar(image) {
     const DivAmpliado = document.getElementById("DivAmpliado");
     const ImagenAmpliadaSrc = document.getElementById("ImagenAmpliadaSrc");
@@ -29,3 +21,8 @@ function CerrarDiv() {
     const DivAmpliado = document.getElementById("DivAmpliado");
     DivAmpliado.style.display = "none";
 }
+
+window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.display = "none";
+});

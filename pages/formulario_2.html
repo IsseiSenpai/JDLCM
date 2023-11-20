@@ -9,19 +9,22 @@
 </head>
 <body>
   <nav>
+    <!--Contenedor del logo-->
     <div class="logo">
-        <a href="../index.html"><img src="../src/imagenes/imagen1.webp" alt=""></a>
-      </div>
-      <i class="bi bi-list abrir" id="abrir"></i>
-    <i class="bi bi-list menu-toggle"></i>
+      <a href="../index.html"><img src="../src/imagenes/imagen1.webp" alt=""></a>
+    </div>
+    <i class="bi bi-list abrir" id="abrir"></i><!--Icono menu-->
     <div class="nav" id="nav">
-      <i class="bi bi-x cerrar" id="cerrar"></i>
-      <ul class="menu">
-          <li class="nav-item"><a href="formulario_1.html">Matricula</a></li>
-          <li class="nav-item"><a href="listado.html">Estudiantes</a></li>
-          <button class="matricula" onclick="window.location.href='login.html';">Cerrar</button>
+      <i class="bi bi-x cerrar" id="cerrar"></i><!--Icono cerrar-->
+      <ul class="menu"><!--Contenedor menu-->
+        <li class="nav-item"><a href="formulario_1.html">Matricula</a></li>
+        <li class="nav-item"><a href="listado.html">Estudiantes</a></li>
+        <!--Boton cerrar-->
+        <button class="matricula" id="ocultar" onclick="window.location.href='login.html';">Cerrar</button>
       </ul>
     </div>
+    <!--Boton cerrar-->
+    <button class="matricula" id="mostrar" onclick="window.location.href='login.html';">Cerrar</button>
   </nav>
       
       <main>
