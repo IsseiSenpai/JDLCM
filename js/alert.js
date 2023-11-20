@@ -67,5 +67,11 @@ function alertModificar() {
         confirmButton: 'custom-confirmar-button',
         denyButton: 'custom-cancelar-button',
     }
-    })
-}
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = 'formulario_1.html';
+      } else if (result.isDenied) {
+        /* No pasa nada XD */
+      }
+    });
+  }
