@@ -68,6 +68,12 @@ nav {
 .menu-toggle.active + .menu {
     display: block;
 }
+.abrir, .cerrar {
+    display: none;
+}
+#ocultar{
+    display: none;
+}
 
 /* Establecer ancho y alto de la imagen */
 .logo img {
@@ -114,7 +120,7 @@ nav {
     display: flex;
     width: 450px;
     height: 450px;
-    background: rgba(9, 49, 70, 0.7);
+    background: rgba(9, 49, 70, 0.37);
     box-shadow: 0 0 15px rgba(0, 0, 0, 12);
     border-radius: 60px;
 }
@@ -143,8 +149,8 @@ nav {
 
 
 .login-form img {
-    max-width: 100%;
-    max-height: 500%; /* Aumenta la altura de la imagen */
+    width: 100%;
+    max-height: 200px; /* Aumenta la altura de la imagen */
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
 }
@@ -156,6 +162,7 @@ nav {
 
 .form-group label {
     font-size: 20px;
+    font-family: var(--parrafo);
 }
 
 .form-group input {
@@ -188,11 +195,15 @@ nav {
     background: rgba(3, 71, 37, 1);
     color: #fff;
 }
+input:focus{
+    outline:none;
+    background-color: rgba(3, 71, 37, 0.555);
+    transition: 0.5s;
+}
 
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: #ffffffab;
-    padding-left: 10px;
-    font-family: var(--titulo2);
+    font-family: var(--parrafo);
 }
 
 
@@ -220,6 +231,48 @@ footer {
 
 /*Responsive*/
 @media screen and (max-width: 768px) {
+    .abrir , .cerrar {
+        display: block; 
+        font-size: 24px; 
+        color: #fff; 
+        cursor: pointer; 
+        padding-left: 40%;
+    }
+    #ocultar {
+        display: block;
+    }
+    #mostrar {
+        display: none;
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+        background-color: #06051A;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu{
+        flex-direction: column;
+        align-items: end;
+    }
+    .menu, .matricula{
+        display: block;
+    }
     /* Estilos para pantallas más pequeñas */
     .login-section {
         padding: 50px; /* Cambia el espaciado izquierdo */
@@ -280,17 +333,5 @@ footer {
     .form-group i {
         font-size: 20px;
         padding-left: 10px; /* Reduce el tamaño de los iconos */
-    }
-
-    .menu, .matricula{
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block; /* Muestra el icono de hamburguesa */
-        font-size: 24px; /* Ajusta el tamaño del icono a tu preferencia */
-        color: #fff; /* Color del icono de hamburguesa */
-        cursor: pointer; /* Cambia el cursor al puntero para indicar que es interactivo */
-        padding-left: 40%;
     }
 }

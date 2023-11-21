@@ -19,9 +19,9 @@
     <title>José de la Crúz Mena</title>
 </head>
 <body>
-    <div id="preloader">
+    <!--<div id="preloader">
         <div id="loader"></div>
-    </div>
+    </div>-->
     <div class="imagenesContenedor">
         <div class="imagen-grande-galeria" id="DivAmpliado" style="display: none;" onclick="CerrarDiv()">
             <img src="" id="ImagenAmpliadaSrc">
@@ -31,20 +31,27 @@
     <header>
         <!--Barra de navegacion-->
         <nav>
+            <!--Contenedor del logo-->
             <div class="logo">
-                <a href="../index.html"><img src="./src/imagenes/imagen1.webp" alt=""></a>
+                <a href="../index.html"><img src="../src/imagenes/imagen1.webp" alt=""></a>
             </div>
-            <i class="bi bi-list menu-toggle"></i>
-            <ul class="menu">
-                <li class="nav-item"><a href="#seccion2">Historia</a></li>
-                <li class="nav-item"><a href="#seccion3">Misión</a></li>
-                <li class="nav-item"><a href="#seccion4">Noticias</a></li>
-                <li class="nav-item"><a href="#seccion5">Galeria</a></li>
-                <li class="nav-item"><a href="#seccion6">Personal</a></li>
-                <li class="nav-item"><a href="#seccion7">Ubicación</a></li>
-                <li class="nav-item"><a href="#seccion8">Contactos</a></li>
-            </ul>
-            <button class="matricula" onclick="window.location.href='pages/login.html';">Matrícula</button>
+            <i class="bi bi-list abrir" id="abrir" onclick=""></i><!--Icono menu-->
+            <div class="nav" id="nav">
+                <i class="bi bi-x cerrar" id="cerrar"></i><!--Icono cerrar-->
+                <ul class="menu"><!--Contenedor menu-->
+                    <li class="nav-item"><a href="#seccion2">Historia</a></li>
+                    <li class="nav-item"><a href="#seccion3">Misión</a></li>
+                    <li class="nav-item"><a href="#seccion4">Noticias</a></li>
+                    <li class="nav-item"><a href="#seccion5">Galeria</a></li>
+                    <li class="nav-item"><a href="#seccion6">Personal</a></li>
+                    <li class="nav-item"><a href="#seccion7">Ubicación</a></li>
+                    <li class="nav-item"><a href="#seccion8">Contactos</a></li>
+                    <!--Boton cerrar-->
+                    <button class="matricula" id="ocultar" onclick="window.location.href='pages/login.html';">Matrícula</button>
+                </ul>
+            </div>
+            <!--Boton cerrar-->
+            <button class="matricula" id="mostrar" onclick="window.location.href='pages/login.html';">Matrícula</button>
         </nav>
         <!--Seccion 1, Pantalla de bienvenida-->
         <section class="seccion1">
@@ -286,5 +293,6 @@
         </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script src="js/men.js"></script>
 </body>
 </html>

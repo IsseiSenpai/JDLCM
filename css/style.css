@@ -189,7 +189,12 @@ nav {
 .menu-toggle.active + .menu {
     display: block;
 }
-
+.abrir, .cerrar {
+    display: none;
+}
+#ocultar{
+    display: none;
+}
 /* Establecer ancho y alto de la imagen */
 .logo img {
     height: 60px;
@@ -510,6 +515,48 @@ footer {
 /*--------------------------------------------------------------------------------------------------------------*/
 /*Aplicacion de responsividad*/
 @media screen and (max-width: 768px) {
+    .abrir , .cerrar {
+        display: block; 
+        font-size: 24px; 
+        color: #fff; 
+        cursor: pointer; 
+        padding-left: 40%;
+    }
+    #ocultar {
+        display: block;
+    }
+    #mostrar {
+        display: none;
+    }
+    .nav{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+        background-color: #06051A;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu{
+        flex-direction: column;
+        align-items: end;
+    }
+    .menu, .matricula{
+        display: block;
+    }
     .seccion1, .seccion2, .seccion6, .ubicacion, .seccion8{
         flex-direction: column;
     }   
@@ -558,17 +605,6 @@ footer {
     }
     span {
         font-size: 1.4em;
-    }
-    .menu, .matricula{
-        display: none;
-    }
-
-    .menu-toggle {
-        display: block; /* Muestra el icono de hamburguesa */
-        font-size: 24px; /* Ajusta el tamaño del icono a tu preferencia */
-        color: #fff; /* Color del icono de hamburguesa */
-        cursor: pointer; /* Cambia el cursor al puntero para indicar que es interactivo */
-        padding-left: 40%;
     }
     .iconos-pie img{
         min-width: 80px;

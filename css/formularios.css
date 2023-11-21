@@ -138,7 +138,6 @@ nav {
 .seccion-2{
     width: 100%;
     background-color: var(--colorTerceario);
-    height: 8vh;
 }
 .nav-links li{
     list-style: none;
@@ -289,7 +288,16 @@ tbody .calificaciones input{
     outline: none;  
     font-family: var(--parrafo);  
 }
-
+.cajas-texto input:focus, .cajas-texto select:focus, .cajas-texto textarea:focus {
+    box-shadow: -3px 5px 10px #241e9e62 ;
+    background-color:  #5858583a ;
+}
+option {
+    background: #c8c8c938;
+}
+option:hover{
+    background-color: #387a3b;
+}
 .cajas-texto textarea{
     font-family: var(--titulo1);
     width: 715px; 
