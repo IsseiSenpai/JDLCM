@@ -48,7 +48,9 @@ function alertRetiro() {
               popup: 'custom-success-alerta',
               confirmButton: 'custom-confirmar-button',
           }
-        })
+        }).then(() => {
+          window.location.href = 'listado_ejemplo.html';
+        });
     } else if (result.isDenied) {
       /* No pasa nada XD */
     }
@@ -69,7 +71,7 @@ function alertModificar() {
     }
     }).then((result) => {
       if (result.isConfirmed) {
-        window.location.href = 'formulario_1.html';
+        window.location.href = 'form_ejemplo_1.html';
       } else if (result.isDenied) {
         /* No pasa nada XD */
       }
