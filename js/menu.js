@@ -1,14 +1,20 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const menuSidebar = document.querySelector(".menu-sidebar");
-
-menuToggle.addEventListener("click", function () {
-    if (menuSidebar.style.width === "0px") {
-        menuSidebar.style.width = "250px";
-    } else {
-        menuSidebar.style.width = "0px";
-    }
+//Pantalla de carga
+window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.display = "none";
 });
+//Nav
+const nav = document.querySelector("#nav");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
 
+abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+})
+
+cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+})
 //Mostras las imagenes de la galeria
 function IMGaMostrar(image) {
     const DivAmpliado = document.getElementById("DivAmpliado");
@@ -21,8 +27,3 @@ function CerrarDiv() {
     const DivAmpliado = document.getElementById("DivAmpliado");
     DivAmpliado.style.display = "none";
 }
-
-window.addEventListener("load", function () {
-    const preloader = document.getElementById("preloader");
-    preloader.style.display = "none";
-});
